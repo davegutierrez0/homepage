@@ -35,7 +35,12 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+          echo "Starting build process..."
+          npm run build
+          echo 'Build directory contents:' && ls -l
+          echo "Ending build process..."
+
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
