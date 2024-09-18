@@ -1,8 +1,12 @@
----
-layout: base.njk
-title: David's Personal Page
----
-<link href="/styles.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <link rel="stylesheet" href="./public/css/tailwind.css">
+</head>
+  <title>David&#39;s Personal Page</title>
+</head>
+  
 <body class="mx-auto max-w-6xl px-3">
   <div class="blue-banner w-full h-28 bg-[#002D8E]"></div>
   <div class="links light-blue-nav w-full h-8 bg-[#5B8EC5]">
@@ -19,7 +23,7 @@ title: David's Personal Page
       <h1 class="text-2xl py-2 font-bold">David</h1>
       <div class="col-span-1 grid grid-cols-3 gap-1 mb-10">
         <div class="col-span-2">
-          <img class="h-auto" src="/img/download.jpeg" />
+          <img class="h-auto" src="./public/img/download.jpeg" />
           <div class="text-center text-sm">
             View My:
             <a class="bold-link text-[#083392] font-extrabold">Pics</a> |
@@ -169,3 +173,5 @@ title: David's Personal Page
       location.reload();
     }, 5000); // Refreshes every 5 seconds
 </script>
+
+</html>
