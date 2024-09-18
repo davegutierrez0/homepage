@@ -6,6 +6,7 @@
 # Build output
 /public
 /dist
+/docs
 
 # Eleventy cache
 .eleventy.cache
