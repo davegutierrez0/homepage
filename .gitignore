@@ -5,6 +5,7 @@
 
 # Build output
 /public
+public/
 /dist
 /docs
 

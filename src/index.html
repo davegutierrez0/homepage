@@ -9,9 +9,9 @@
   
 <body class="mx-auto max-w-6xl px-3">
   <div class="blue-banner w-full h-28 bg-[#002D8E]"></div>
-  <div class="links light-blue-nav w-full h-8 bg-[#5B8EC5]">
-    <ul class="flex justify-between items-center text-white py-2 my-auto">
-    <li class="items-center my-auto">Home</li>
+  <div class="links light-blue-nav w-full bg-[#5B8EC5]">
+    <ul class="flex justify-between text-white font-bold px-[0.75rem] py-1 m-auto">
+    <li>Home</li>
     <li>GitHub</li>
     <li>Pics</li>
     <li>Videos</li>
@@ -97,7 +97,7 @@
       </div>
 
       <div class="blog-section pl-4 my-5 text-sm flex flex-col gap-3">
-        <div class="latest-blog font-bold">David's Latest Blog Entry</div>
+        <div class="latest-blog font-bold">David's Latest</div>
         <div>
           David's Latest Blog Entry [<a
             class="bold-link text-[#083392] font-extrabold"
@@ -164,9 +164,6 @@
       lastLoginDate.innerHTML += today.toLocaleDateString('en-US', options);;
   });
 
-    setTimeout(function () {
-      location.reload();
-    }, 5000); // Refreshes every 5 seconds
 </script>
 
 </html>
