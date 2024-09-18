@@ -38,7 +38,7 @@ jobs:
         run: |
           echo "Starting build process..."
           npm run build
-          echo 'Build directory contents:' && ls -l
+          echo 'Build directory contents:' && ls -l public
           echo "Ending build process..."
 
 
