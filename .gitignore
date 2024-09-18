@@ -4,7 +4,7 @@
 /node_modules
 
 # Build output
-/_site
+/public
 /dist
 
 # Eleventy cache

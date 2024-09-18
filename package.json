@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "start": "npx eleventy --serve & npx tailwindcss -i ./src/styles/tailwind.css -o ./_site/style.css --watch",
+    "build": "npx eleventy && npx tailwindcss -i ./src/styles/tailwind.css -o ./_site/style.css"
   },
   "keywords": [],
   "author": "",
