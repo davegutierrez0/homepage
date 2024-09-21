@@ -1,0 +1,48 @@
+/* Mobile Menu */
+
+@media (max-width: 640px) {
+  .menu-hidden {
+    height: 0;
+    opacity: 0;
+  }
+  .menu-visible {
+    opacity: 1;
+  }
+}
+
+/* Animations */
+
+/* Hourglass Loader styles */
+.hourglass {
+  position: fixed;
+  color: black;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 80px;
+  background: transparent;
+  animation: hourglass 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Slower transition */
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+
+
+/* Keyframes for hourglass animation */
+@keyframes hourglass {
+  0% {
+    transform: rotate(0deg); /* Start position */
+  }
+  50% {
+    transform: rotate(90deg); /* Midway rotation and squash */
+  }
+  100% {
+    transform: rotate(180deg); /* End position */
+  }
+}
+
+
+.menu-transition {
+  transition: height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden; /* Prevent content overflow during transition */
+}
