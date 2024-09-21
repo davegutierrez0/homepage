@@ -3,11 +3,13 @@ const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 
 module.exports = function(eleventyConfig) {
-  // Watch for changes in CSS and image directories
+  // Watch for changes in JS, CSS and image directories
+  eleventyConfig.addWatchTarget("src/js/");
   eleventyConfig.addWatchTarget("src/css/");
   eleventyConfig.addWatchTarget("src/img/");
 
-  // Passthrough copy for CSS and image directories
+  // Passthrough copy for JS, CSS and image directories
+  eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
 

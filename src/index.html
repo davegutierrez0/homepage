@@ -25,10 +25,10 @@
 
   gtag('config', 'G-DB781FS1RD');
 </script>
-<body class="overflow-x-hidden max-w-6xl md:mx-auto px-4 sm:px-6 lg:px-8">
-  <div id="loader" class="">
+<body class=" overflow-x-hidden max-w-6xl md:mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- <div id="loader" class="">
     <img class="hourglass mx-2 w-6 h-6" src="img/hourglass-regular.svg" alt="loadingHourglass"/>
-</div>
+</div> -->
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKHTG9LJ"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -58,7 +58,7 @@
       <h1 class="text-2xl py-2 font-bold">David G</h1>
       <div class="col-span-1 grid grid-cols-3 gap-1 mb-10">
         <div class="col-span-2">
-          <img class="h-auto" src="img/download.jpeg" />
+          <img class="fade-in slow h-auto" src="img/download.jpeg" />
           <div class="text-center text-sm">
             View My:
             <a class="bold-link text-[#083392] font-extrabold">Pics</a> |
@@ -69,7 +69,7 @@
           class="flex flex-col px-4 text-xs gap-4 leading-3 whitespace-nowrap align-items-center items-center"
         >
           <span>":-)"</span>
-          <span>Male</span>
+          <span>(he/him)</span>
           <span class="p-0">33 years old</span>
           <span>Sunnyside,</span>
           <span>Florida</span>
@@ -131,39 +131,27 @@
       </div>
 
       <div class="blog-section pl-4 my-5 text-sm flex flex-col gap-3">
-        <div class="latest-blog font-bold">David's Latest</div>
+        <div class="latest-blog font-bold">David's Latest Projects</div>
         <div>
-          David's Latest Blog Entry [<a
+          Interval Timer in Vanilla React (<a
             class="bold-link text-[#083392] font-extrabold"
-            >Subscribe to this Blog</a
-          >]
+            >view more</a
+          >)
         </div>
-        <div>
-          MySpace Concert & Parties -Georgia, Orlando, Miami! (<a
+        <div>Lightning Blog built with Next.js
+           (<a
             class="bold-link text-[#083392] font-extrabold"
             >view more</a
           >)
         </div>
         <div>
-          In Stores Today - MySpace (<a
+          Post-Only Twitter App built on Next.js (<a
             class="bold-link text-[#083392] font-extrabold"
             >view more</a
           >)
         </div>
         <div>
-          MySpace Records - get more photos for your profile! (<a
-            class="bold-link text-[#083392] font-extrabold"
-            >view more</a
-          >)
-        </div>
-        <div>
-          October 29th - MySpace 2-Year Annivarsary Concert! (<a
-            class="bold-link text-[#083392] font-extrabold"
-            >view more</a
-          >)
-        </div>
-        <div>
-          NIN, QOTSA, Acoustic and Punk Tours (!) (<a
+          Gravity Fields in Python (<a
             class="bold-link text-[#083392] font-extrabold"
             >view more</a
           >)
@@ -175,15 +163,19 @@
         </div>
       </div>
 
-      <div class="blurbs">
+      <div class="blurbs flex flex-col gap-8">
         <h1 class="mt-2 pl-6 bg-[#FFC58E] text-[#FF600B] font-bold">
           David's Blurbs
         </h1>
+
+        <div class="about-me">
         <h2 class="pl-4 my-2 font-bold text-[#FF600B]">About me:</h2>
-        <p class="pl-4">
+        <p class="pl-6">
           Motivated Full Stack Developer with several years of experience designing and developing memorable and user-friendly applications that have purpose. I am a mission-driven individual and obsessed with quality, with a focus on scalable and user-friendly projects, relationship- team management, and agile methodologies for large-scale project management and rapid innovation.
         </p>
+      </div>
 
+      <div class="role-history">
         <h2 class="pl-4 my-2 font-bold text-[#FF600B]">Roles I've Enjoyed:</h2>
         <ul class="list-disc pl-10 space-y-4">
           <li>Full Stack Developer @ InterVarsity Christian Fellowship (Present)</li>
@@ -191,79 +183,21 @@
           <li>Associate Portfolio Manager @ Aperio by Blackrock</li>
           <li>Associate Analyst @ Moody's Investors Service</li>
         </ul>
+      </div>
 
-        <h2 class="pl-4 my-2 font-bold text-[#FF600B]">School Stuff:</h2>
+      <div class="school-history">
+
+        <h2 class="pl-4 my-2 font-bold text-[#FF600B]">Schooling:</h2>
         <ul class="list-disc pl-10 space-y-4">
           <li>Master of Computer Science @ UIUC (Class of 2021)</li>
           <li>Bachelor of Arts @ UGA (Class of 2013)</li>
         </ul>
+        </div> 
       </div>
     </div>
   </div>
 </body>
 
-<script>
-
-// Measure loading performance and show the loader when the page is loading
-  // Store the start time when the script is loaded
-const startTime = performance.now();
-
-window.addEventListener('load', () => {
-  // Calculate the loading time
-  const endTime = performance.now();
-  const loadingTime = endTime - startTime;
-
-  // Log or display the loading time
-  console.log(`Loading time: ${loadingTime.toFixed(2)} milliseconds`);
-
-
-  // const loader = document.getElementById('loader');
-  // setTimeout(() => {
-  //   console.log("five seconds passed")
-  // }, 5000);
-  // loader.classList.add('hidden'); // Hide loader after page load
-});
-
-
-  document.addEventListener('DOMContentLoaded', function() {
-      const lastLoginDate = document.getElementById('todayDate');
-      const today = new Date();
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-
-      lastLoginDate.innerHTML += today.toLocaleDateString('en-US', options);;
-  });
-
-  document.getElementById('menu-toggle').addEventListener('click', function () {
-      const menu = document.getElementById('menu');
-      const isVisible = menu.classList.contains('menu-visible');
-
-      if (isVisible) {
-        // Start closing animation
-        menu.style.height = `${menu.scrollHeight}px`; // Set to the current height
-        // Trigger reflow to apply the transition
-        menu.offsetHeight; // Forces the reflow
-        menu.style.height = '0'; // Set height to 0 for closing
-
-        setTimeout(() => {
-          menu.classList.remove('menu-visible');
-          menu.classList.add('menu-hidden'); // Fully hide it after transition
-        }, 300); // Match this duration with the CSS transition duration
-      } else {
-        // Start opening animation
-        menu.classList.remove('menu-hidden');
-        menu.classList.add('menu-visible');
-        
-        // Set height to the full height for opening
-        menu.style.height = '0'; // Start from 0
-        menu.offsetHeight; // Forces the reflow
-        menu.style.height = `${menu.scrollHeight}px`; // Set to the full height
-        
-        // After the transition ends, set height to auto for content
-        setTimeout(() => {
-          menu.style.height = 'auto';
-        }, 300); // Match this duration with the CSS transition duration
-      }
-    });
-</script>
+<script src="js/custom.js"></script>
 
 </html>
