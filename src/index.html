@@ -26,6 +26,7 @@
   gtag('config', 'G-DB781FS1RD');
 </script>
 <body class="overflow-x-hidden max-w-6xl md:mx-auto px-4 sm:px-6 lg:px-8">
+  <div id="loader" class="hourglass hidden"></div>
 
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKHTG9LJ"
@@ -201,6 +202,13 @@
 </body>
 
 <script>
+
+// Show the loader when the page is loading
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  loader.classList.add('hidden'); // Hide loader after page load
+});
+
 
   document.addEventListener('DOMContentLoaded', function() {
       const lastLoginDate = document.getElementById('todayDate');
