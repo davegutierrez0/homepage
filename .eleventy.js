@@ -3,10 +3,15 @@ const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 
 module.exports = function(eleventyConfig) {
+  // Watch for changes in CSS and image directories
   eleventyConfig.addWatchTarget("src/css/");
+  eleventyConfig.addWatchTarget("src/img/");
+
+  // Passthrough copy for CSS and image directories
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
 
+  // Custom extension for processing Tailwind CSS
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
     outputFileExtension: "css",
@@ -17,12 +22,14 @@ module.exports = function(eleventyConfig) {
           return output.css;
         };
       }
-      return () => inputContent;
+      return () => inputContent; // Return unprocessed content for other CSS files
     }
-  });    return {
-      dir: {
-        input: "src",
-        output: "public"
-      }
-    };
+  });
+
+  return {
+    dir: {
+      input: "src",
+      output: "public"
+    }
   };
+};

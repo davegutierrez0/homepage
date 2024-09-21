@@ -26,8 +26,9 @@
   gtag('config', 'G-DB781FS1RD');
 </script>
 <body class="overflow-x-hidden max-w-6xl md:mx-auto px-4 sm:px-6 lg:px-8">
-  <div id="loader" class="hourglass hidden"></div>
-
+  <div id="loader" class="">
+    <img class="hourglass mx-2 w-6 h-6" src="img/hourglass-regular.svg" alt="loadingHourglass"/>
+</div>
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKHTG9LJ"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -203,10 +204,24 @@
 
 <script>
 
-// Show the loader when the page is loading
+// Measure loading performance and show the loader when the page is loading
+  // Store the start time when the script is loaded
+const startTime = performance.now();
+
 window.addEventListener('load', () => {
-  const loader = document.getElementById('loader');
-  loader.classList.add('hidden'); // Hide loader after page load
+  // Calculate the loading time
+  const endTime = performance.now();
+  const loadingTime = endTime - startTime;
+
+  // Log or display the loading time
+  console.log(`Loading time: ${loadingTime.toFixed(2)} milliseconds`);
+
+
+  // const loader = document.getElementById('loader');
+  // setTimeout(() => {
+  //   console.log("five seconds passed")
+  // }, 5000);
+  // loader.classList.add('hidden'); // Hide loader after page load
 });
 
 
