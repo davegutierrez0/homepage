@@ -60,3 +60,8 @@
   transition: height 0.3s ease, opacity 0.3s ease;
   overflow: hidden; /* Prevent content overflow during transition */
 }
+
+.custom-color-shadow {
+  color: transparent;
+  text-shadow: 0 0 0 #DF7537;
+}
