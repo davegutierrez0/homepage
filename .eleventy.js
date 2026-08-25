@@ -7,11 +7,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("src/js/");
   eleventyConfig.addWatchTarget("src/css/");
   eleventyConfig.addWatchTarget("src/img/");
+  eleventyConfig.addWatchTarget("src/html/");
 
   // Passthrough copy for JS, CSS and image directories
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/html");
 
   // Custom extension for processing Tailwind CSS
   eleventyConfig.addTemplateFormats("css");
